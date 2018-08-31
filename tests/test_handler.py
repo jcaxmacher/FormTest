@@ -11,6 +11,7 @@ class TestHandlerCase(unittest.TestCase):
         self.assertEqual(result['statusCode'], 200)
         self.assertEqual(result['headers']['Content-Type'], 'application/json')
         self.assertIn('Hello World', result['body'])
+        self.assertIn('blah', result['body'])
 
 
 if __name__ == '__main__':
